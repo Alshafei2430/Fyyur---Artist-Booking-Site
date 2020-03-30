@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Signing you up has Success!
+{% endblock %}
+{% block body %}
+    <form action="{{url_for('login')}}">
+        <button class="btn btn-secondary">Login</button>
+    </form> 
+{% endblock %}

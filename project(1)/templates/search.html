@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    logging you up has Success!
+{% endblock %}
+
+{% block body %}
+    <div class="input-group mb-3">
+        <form method="POST">
+                <input type="text" name="isbn" placeholder="isbn">
+                <input type="text" name="title" placeholder="title">
+                <input type="text" name="author" placeholder="author">
+                
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="button-addon2">Search</button>
+            </div>
+        </form>
+
+    </div>
+{% endblock%}

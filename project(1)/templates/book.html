@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Book datails
+{% endblock %}
+{% block body %}
+    {% for book in book %}
+        ISBN {{book.isbn}} Title {{book.title}} Author {{book.author}} Year {{book.year}} <br>
+    {% endfor %}
+    work_rating_count: {{work_rating_count}} <br>
+    average_rating: {{average_rating}}
+    <form action="{{url_for('review')}}">
+        <button>Click to review</button>
+    </form>
+
+{% endblock %}

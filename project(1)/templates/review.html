@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Review
+{% endblock %}
+{% block body %}
+    <form action="{{ url_for('submit_review')}}" method="POST">
+        <label>Preference</label>
+        <select name="scale">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+        </select>
+        <input name="comment" type="text" placeholder="Write a comment">
+
+        <button>Submit</button>
+      </form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Profile
+{% endblock %}
+{% block body %}
+    {% for userdata in userdata %}
+        ISBN {{userdata.isbn}} Title {{userdata.title}} Author {{userdata.author}} Year {{userdata.year}} <br>
+        scale {{userdata.scale}} <br>
+        Comment {{userdata.comment}} <br>
+    {% endfor %}
+    <!-- <form action="{{url_for('review', title=userdata.title)}}">
+        <button>Click to review</button>
+    </form> -->
+
+{% endblock %}
